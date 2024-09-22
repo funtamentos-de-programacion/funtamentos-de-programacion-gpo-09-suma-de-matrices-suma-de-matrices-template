@@ -1,0 +1,35 @@
+#include <stdio.h>
+#define MAX 10 
+void sumarMatrices(int a[MAX][MAX], int b[MAX][MAX], int resultado[MAX][MAX], int filas, int columnas) {
+for (int i = 0; i < filas; i++) {
+for (int j = 0; j < columnas; j++) {
+resultado[i][j] = a[i][j] + b[i][j];
+    }
+  }
+}
+void imprimirMatriz(int matriz[MAX][MAX], int filas, int columnas) {
+for (int i = 0; i < filas; i++) {
+for (int j = 0; j < columnas; j++) {
+printf("%d ", matriz[i][j]);
+  }
+printf("\n");
+    }
+  }
+int main() {
+int a[MAX][MAX], b[MAX][MAX], resultado[MAX][MAX];
+int filas, columnas;
+printf("Ingresa el número de filas y columnas: ");
+scanf("%d %d", &filas, &columnas);
+printf("Ingresa los elementos de la primera matriz:\n");
+for (int i = 0; i < filas; i++)
+for (int j = 0; j < columnas; j++)
+scanf("%d", &a[i][j]);
+printf("Ingresa los elementos de la segunda matriz:\n");
+for (int i = 0; i < filas; i++)
+for (int j = 0; j < columnas; j++)
+scanf("%d", &b[i][j]);
+sumarMatrices(a, b, resultado, filas, columnas);
+printf("Resultado de la suma:\n");
+imprimirMatriz(resultado, filas, columnas);
+return 0;
+}
