@@ -21,10 +21,22 @@ int main(){
   }
 
   //TODO(1): Colocar el código para leer la segunda matriz
-
+  for (int i =0; i <m; i++){
+    for (int j =0; j <n; j++){
+      scanf("%d", &b[i][j]);
+    }
+  }
   //TODO(2): Colocar el código para sumar las matrices
-
+  for (int i = 0; i <m; i++) {
+    for (int j = 0; j <n; j++) {
+      c[i][j] = a[i][j] + b[i][j];
+    }
+  }
   //TODO(3): Colocar el código para mostrar la matriz C
-
+  for (int i = 0; i <m; i++) {
+      for (int j = 0; j <n; j++) {
+        printf("%d", &c[i][j]," ");
+      }
+    }
   return 0;
 }
