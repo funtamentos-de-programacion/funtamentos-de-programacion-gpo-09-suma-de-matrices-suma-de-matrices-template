@@ -2,7 +2,7 @@
 #define TAM 100
 
 int main(){
-  int a[TAM][TAM], b[TAM][TAM], c[TAM][TAM];
+  int a[TAM][TAM], b[TAM][TAM], r[TAM][TAM];
   int m, n, p, q;
   int i, j;
 
@@ -16,15 +16,16 @@ int main(){
 
   for(i =0; i <m; i++){
     for(j=0; j <n ; j++){
-      scanf("%d", &a[i][j]);
+        printf("Ingresa el valor de la primer matriz en la posición [%i][%i]\n", i, j);
+        scanf("%d", &a[i][j]);
+        printf("Ingresa el valor de la segunda matriz en la posición [%i][%i]\n", i, j);
+        scanf("%d", &b[i][j]);
+        
+        r[i][j]=a[i][j]+b[i][j]; 
+        printf("El resultado en la posición [%i][%i] es: \n", i, j);
+        printf("[%d]\n", r[i][j]);
     }
   }
-
-  //TODO(1): Colocar el código para leer la segunda matriz
-
-  //TODO(2): Colocar el código para sumar las matrices
-
-  //TODO(3): Colocar el código para mostrar la matriz C
 
   return 0;
 }
